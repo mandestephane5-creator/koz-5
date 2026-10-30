@@ -1,0 +1,1 @@
+{"name": "KOZ SERVICES", "short_name": "KOZ", "start_url": "index.html", "display": "standalone", "background_color": "#FFFFFF", "theme_color": "#0A1128", "icons": [{"src": "img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}, {"src": "img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}
