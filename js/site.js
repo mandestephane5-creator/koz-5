@@ -166,7 +166,7 @@
     panel.classList.add("is-on");
     panel.setAttribute("aria-hidden", "false");
     overlay && overlay.classList.add("is-on");
-    document.body.classList.add("no-scroll");
+    document.documentElement.classList.add("no-scroll");
     const f = panel.querySelector("input, button, a");
     setTimeout(() => f && f.focus(), 60);
   }
@@ -175,7 +175,7 @@
     openPanel.classList.remove("is-on");
     openPanel.setAttribute("aria-hidden", "true");
     overlay && overlay.classList.remove("is-on");
-    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
     openPanel = null;
     lastFocus && lastFocus.focus && lastFocus.focus();
   }
@@ -193,7 +193,7 @@
     burger.setAttribute("aria-expanded", on);
     burger.setAttribute("aria-label", on ? "Fermer le menu" : "Ouvrir le menu");
     $("i", burger).className = on ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-    document.body.classList.toggle("no-scroll", on);
+    document.documentElement.classList.toggle("no-scroll", on);
     $$(".mn-link, .mn-row, .mn-info, .mn-acts", mnav).forEach((a, i) => (a.style.transitionDelay = on ? 60 + i * 35 + "ms" : "0ms"));
   }
   mnavBg && mnavBg.addEventListener("click", () => setMenu(false));
